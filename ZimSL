@@ -1,0 +1,22 @@
+ZSL
+zsl_dict = {
+    'A': '🤟', 'B': '👍', 'C': '🤞', 'D': '🤘', 'E': '🖖',
+    'F': '🤙', 'G': '✌️', 'H': '👌', 'I': '👆', 'J': '👇',
+    'K': '🖐️', 'L': '👋', 'M': '🤚', 'N': '🖖', 'O': '👌',
+    'P': '☝️', 'Q': '✊', 'R': '👊', 'S': '✋', 'T': '🤛',
+    'U': '🤜', 'V': '💪', 'W': '✌️', 'X': '👍', 'Y': '🤞',
+    'Z': '🤟', ' ': ' '  # Space remains unchanged
+}
+
+def text_to_zsl(text):
+    text = text.upper()  # Convert input text to uppercase
+    zsl_text = ''
+    for char in text:
+        # Get ZSL gesture for each character or keep unchanged if not found
+        asl_text += asl_dict.get(char, char) + ' '
+    return asl_text
+
+# Example usage
+input_text = "HELLO WORLD"
+zsl_output = text_to_zsl(input_text)
+print(zsl_output)
